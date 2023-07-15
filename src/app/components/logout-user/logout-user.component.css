@@ -1,7 +1,7 @@
 main {
     width: 100vw;
     height: 100%;
-    display: flex; /*next two lines used for centering the content on the page - Steve Woods */
+    display: flex; /*next two lines used for centering the content on the page */
     justify-content: center;
     margin-top: 10px;
     overflow: hidden;

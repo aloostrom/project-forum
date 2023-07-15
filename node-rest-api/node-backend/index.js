@@ -39,7 +39,7 @@ app.use(
 app.use(cors());
 
 // Static directory path
-app.use(express.static(path.join(__dirname, "dist/cis480-capstone")));
+app.use(express.static(path.join(__dirname, "dist/project-forum")));
 
 // API root
 app.use("/api", capstoneRoute);
@@ -65,7 +65,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "dist/cis480-capstone/index.html"));
+  res.sendFile(path.join(__dirname, "dist/project-forum/index.html"));
 });
 
 // error handler

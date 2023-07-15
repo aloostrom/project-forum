@@ -13,7 +13,7 @@
     </div>
   </div>
   <div class="body">
-    <!-- MAIN POST: Displays if isSubPost is set to false. --Aren -->
+    <!-- MAIN POST: Displays if isSubPost is set to false.-->
 
     <div *ngIf="!isSubPost">
       <div id="mainpost">
@@ -33,7 +33,7 @@
       ></app-reply-post>
     </div>
 
-    <!-- SUB POST: Displays if isSubPost is set to true. --Aren -->
+    <!-- SUB POST: Displays if isSubPost is set to true.-->
     <div *ngIf="isSubPost">
       <div id="subpost" *ngIf="!editMode">
         {{ post.body }}

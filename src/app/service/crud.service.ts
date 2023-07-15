@@ -77,7 +77,7 @@ export class CrudService {
     )
   }
  
-  //Add user -- ty adams
+  //Add user 
   AddUser(data:any) {
     let API_URL = `${this.REST_API}/user`;
     return this.httpClient.post(API_URL, data)

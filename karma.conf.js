@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/cis480-capstone'),
+      dir: require('path').join(__dirname, './coverage/project-forum'),
       subdir: '.',
       reporters: [
         { type: 'html' },

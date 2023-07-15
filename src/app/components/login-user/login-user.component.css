@@ -18,7 +18,7 @@
     padding: 1rem;
     padding-bottom: 1rem;
     align-content: center;
-    width: fit-content; /*re-sized form borders to fit test box contents: Alex Loostrom*/
+    width: fit-content; /*re-sized form borders to fit test box contents*/
   }
   form input {
     display: block;
@@ -28,12 +28,12 @@
     font-size: 1.2rem;
     color: black;
     text-align: center;
-    margin-bottom: 0.6rem; /* space out text boxes to keep from stacking: Alex Loostrom */
+    margin-bottom: 0.6rem; /* space out text boxes to keep from stacking */
   }
   ::placeholder {
     color: black;
   }
-  /*added/used a div login-button to space the login button from bottom of input - Steve Woods*/
+  /*added/used a div login-button to space the login button from bottom of input*/
   .login-button {
     margin-top: 0.4rem;
   }
@@ -49,8 +49,6 @@
     background: linear-gradient(#e2e2e2, dodgerblue);
     border: black solid 0.12rem;
   }
-  
-  /* --- CHANGES MADE BY AREN PAST THIS POINT --- */
   
   /* error message */
   .error {

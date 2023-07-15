@@ -1,12 +1,12 @@
 <main>
   <div class="loginForm">
-    <!-- This is rendered if isLoggedIn is true --Aren -->
+    <!-- This is rendered if isLoggedIn is true -->
     <div *ngIf="isLoggedIn">
       <p>Hello {{ user.firstname }}, you are logged in.</p>
       <input type="button" (click)="logout()" value="Log Out" />
     </div>
 
-    <!-- This is rendered if isLoggedIn is false --Aren -->
+    <!-- This is rendered if isLoggedIn is false -->
     <div *ngIf="!isLoggedIn">
       <h1>Login</h1>
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
@@ -18,7 +18,7 @@
           #username
           formControlName="username"
         />
-        <!--Removed : to make the lines placeholders to look cleaner - Steve Woods-->
+        <!--Removed : to make the lines placeholders to look cleaner-->
         <input
           type="password"
           placeholder="Password"
@@ -39,7 +39,7 @@
           </div>
         </div>
         <div class="login-button">
-          <!--added/used a div login-button to space the login button from bottom of input - Steve Woods-->
+          <!--added/used a div login-button to space the login button from bottom of input-->
           <input type="submit" value="Login" />
           <!-- #username passess value to login(username.value, password.value -->
         </div>

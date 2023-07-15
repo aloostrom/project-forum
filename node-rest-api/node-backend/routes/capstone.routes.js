@@ -10,7 +10,7 @@ app.use(express.json());
 //Make the thing an API and name it
 const capstoneRoute = express.Router();
 
-//import our data models, courtesy of Aren Ignacio
+//import our data models
 let ClosedPosts = require("../model/ClosedPosts");
 let Contractors = require("../model/Contractors");
 let OpenPosts = require("../model/OpenPosts");
@@ -18,9 +18,7 @@ let ReportedPosts = require("../model/ReportedPosts");
 let Reviews = require("../model/Reviews");
 let User = require("../model/User");
 
-//^^AREN^^
-
-//User Authentication -- Aren
+//User Authentication 
 capstoneRoute.route("/authenticate/user").post((req, res) => {
   const { username, password } = req.body;
 
@@ -45,7 +43,7 @@ capstoneRoute.route("/authenticate/user").post((req, res) => {
   });
 });
 
-//Contractor Authentication --Aren
+//Contractor Authentication
 capstoneRoute.route("/authenticate/contractor").post((req, res) => {
   const { username, password } = req.body;
 
@@ -125,13 +123,12 @@ capstoneRoute.route("/user/role/:id").get((req, res) => {
   });
 });
 
-//^^^^^^^PAL^^^^^^^
 
 /**********
 Open Posts
 ***********/
 
-//get all open posts --PAL
+//get all open posts 
 capstoneRoute.route("/open-posts").get((req, res) => {
   OpenPosts.find({ isParent: true }, (error, data) => {
     if (error) {
@@ -146,7 +143,7 @@ capstoneRoute.route("/open-posts").get((req, res) => {
   });
 });
 
-//get all open posts for a user --PAL
+//get all open posts for a user
 capstoneRoute.route("/open-posts/:username").get((req, res) => {
   OpenPosts.find({ username: req.params.username }, (error, data) => {
     if (error) {
@@ -197,7 +194,7 @@ capstoneRoute.route("/search/:category/:query").get((req, res) => {
     );
 });
 
-//load current account details --PAL
+//load current account details 
 capstoneRoute.route("/load-account/:username").get((req, res) => {
   User.findOne({ username: req.params.username }, (error, data) => {
     if (error) {

@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  background: rgb(142, 165, 220);
+}
+
+.subBG {
+  background: rgba(236, 185, 185, 0.8);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: papayawhip;
+  height: 30px;
+  width: 100%;
+}
+
+.header div {
+  margin: 0px 20px 0px 10px;
+}
+
+.body {
+  padding: 10px 10px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+#mainpost {
+  min-height: 50px;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+#subpost {
+  min-height: 20px;
+  padding: 0px 20px 0px 40px;
+  font-size: 1rem;
+}
+
+#post-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu {
+  margin-right: 5px;
+  z-index: 0;
+}

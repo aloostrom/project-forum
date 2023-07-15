@@ -1,0 +1,44 @@
+<div class="container">
+  <main>
+    <!--put inside of main tag for purpose of CSS - Steve Woods-->
+    <div class="search">
+      <h2>Search</h2>
+
+      <!-- SEARCH BOX -->
+      <div class="searchbox-container">
+        <form>
+          <div class="searchbox">
+            <input type="text" #query />
+            <div id="go-btn" (click)="search(query.value)">GO</div>
+          </div>
+
+          <!-- RADIO BUTTON GROUP -->
+          <div class="radio-grp">
+            <div>
+              <input
+                type="radio"
+                name="category"
+                id="author"
+                (click)="setCategory('author')"
+                checked
+              />
+              <label for="author">Author</label>
+            </div>
+            <div>
+              <input
+                type="radio"
+                name="category"
+                id="post"
+                (click)="setCategory('post')"
+              />
+              <label for="post">Post</label>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="posts" *ngFor="let post of openPost">
+      <app-post [post]="post" [isSubPost]="true"></app-post>
+    </div>
+  </main>
+</div>

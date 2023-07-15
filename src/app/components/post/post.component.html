@@ -1,0 +1,50 @@
+<div class="container" [class.subBG]="isSubPost === true">
+  <div class="header">
+    <div id="post-details">
+      <div id="details">{{ post.username }}</div>
+      <div id="date">{{ date }}</div>
+    </div>
+    <div class="menu">
+      <app-kehbab-menu
+        [postID]="post._id"
+        [authorID]="post.author"
+        (editMode)="toggleEdit($event)"
+      ></app-kehbab-menu>
+    </div>
+  </div>
+  <div class="body">
+    <!-- MAIN POST: Displays if isSubPost is set to false. --Aren -->
+
+    <div *ngIf="!isSubPost">
+      <div id="mainpost">
+        <div *ngIf="!editMode">{{ post.body }}</div>
+        <app-reply-post
+          *ngIf="editMode"
+          (editMode)="toggleEdit($event)"
+          [type]="'edit'"
+          [postID]="post._id"
+          [isActive]="true"
+        ></app-reply-post>
+      </div>
+      <app-reply-post
+        (editMode)="toggleEdit($event)"
+        [type]="'reply'"
+        [parentID]="post._id"
+      ></app-reply-post>
+    </div>
+
+    <!-- SUB POST: Displays if isSubPost is set to true. --Aren -->
+    <div *ngIf="isSubPost">
+      <div id="subpost" *ngIf="!editMode">
+        {{ post.body }}
+      </div>
+      <app-reply-post
+        *ngIf="editMode"
+        (editMode)="toggleEdit($event)"
+        [type]="'edit'"
+        [postID]="post._id"
+        [isActive]="true"
+      ></app-reply-post>
+    </div>
+  </div>
+</div>

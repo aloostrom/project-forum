@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
+
+header {
+  display: flex;
+  background: #ffcc00;
+  width: 100%;
+  height: 50px;
+  justify-content: space-around;
+  font-size: 1.4rem;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 3;
+  top: 0;
+}
+.list {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+}
+
+ul li {
+  margin: 0px 20px;
+}
+
+.list-items a {
+  text-decoration: none;
+  color: #000;
+}
+.search {
+  width: 100%;
+  text-align: center;
+}
+.search input {
+  margin-top: 1rem;
+  width: 50%;
+}
+.aicon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+.aicon img {
+  width: 30px;
+  height: 30px;
+  color: #1e90ff;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  min-width: 10%;
+  margin-left: 45px;
+}
+
+.logo span {
+  margin-left: 15px;
+  font-family: "Monoton", serif;
+  color: #000;
+}
+
+.logo img {
+  width: 40px;
+  border-radius: 25px;
+}
